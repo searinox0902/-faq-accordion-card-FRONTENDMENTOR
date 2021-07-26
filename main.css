@@ -1,0 +1,197 @@
+:root {
+    --text-color-dark: hsl(238, 29%, 16%);
+    --text-color-soft-red: hsl(14, 88%, 65%); 
+    --text-color-grey: hsl(237, 9%, 45%);
+}
+
+img, picture{
+    display: block;
+    width: 100%;
+}
+
+p, h1, h2, li, a, span, button {
+    font-family: 'Kumbh Sans', sans-serif;
+    color: var(--text-color-dark);
+}
+
+
+body{
+    margin: 0;
+    padding: 0;
+    background: rgb(34,193,195);
+    background-size: cover;
+    background-repeat: no-repeat;
+  
+    background: linear-gradient(180deg, hsl(273, 75%, 66%) 0%, hsl(240, 73%, 65%) 100%);
+}
+
+
+.main-content{
+    min-height: 100vh; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card{
+    background-color: white;
+    border-radius: 25px;
+    display: flex;
+    width: 70%;
+    flex-grow: 0;
+    flex-shrink: 0;
+    flex-basis: auto;
+}
+
+.card--image{
+    width: 50%;
+    flex-grow: 0;
+    flex-shrink: 0;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    background-image: url(./images/bg-pattern-desktop.svg);
+    background-position: right center;
+}
+
+.card--content{
+    width: 50%;
+    padding: 3rem 1.5rem;
+}
+
+.card--content ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.card--list__item{
+    border-bottom: solid #000 1px;
+    padding: 1rem 0;
+    cursor: pointer;
+}
+
+.card--list__item-title{
+    display: flex;
+    margin: 0;
+    width: 100%;
+    justify-content: space-between;
+    transition: all .3s ease-in-out;
+}
+
+.card--list__item-title p {
+    margin: 0 !important;
+}
+
+.card--list__item-title:hover{
+    color: var(--text-color-soft-red);
+    cursor: pointer;
+}
+
+.card--list__item-title figure{
+    margin: 0;
+    width: auto;
+}
+
+.card--list__item-content {
+    display: none;
+    line-height: 1.4;
+    opacity: 0;
+    height: 0;
+    margin-bottom: 0;
+    color: var(--text-color-grey);
+    transition: all .4s ease-in-out;
+}
+
+.card--list__item img{
+    min-width: 1rem;
+    transition: all .4s ease-in-out;
+    transform: rotate(0deg);
+}
+.card--list__item.active img{
+    transform: rotate(180deg);
+}
+
+
+
+
+.card--list__item.active .card--list__item-content{
+    display: block;
+    opacity: 1;
+    height: auto;
+}
+
+.card--list__item.active .card--list__item-title{
+    font-weight: 700;
+}
+.card--image{
+    position: relative;
+}
+.card--image::before{
+    content: '';
+    display: block;
+    position: absolute;
+    margin: auto;
+    top: 20%;
+    bottom: 0;
+    left: -20%;
+    width: 12rem;
+    height: 12rem;
+    background-image: url('./images/illustration-box-desktop.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+}   
+
+
+
+@media screen and (max-width: 675px) {
+    body{
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+
+    .card{
+        width: 100%;
+        margin-top: 4rem;
+        max-width: 80vw;
+        position: relative;
+        flex-direction: column;
+        -webkit-box-shadow: 0px 5px 28px 0px rgba(50, 50, 50, 0.31);
+        -moz-box-shadow:    0px 5px 28px 0px rgba(50, 50, 50, 0.31);
+        box-shadow:         0px 5px 28px 0px rgba(50, 50, 50, 0.31);
+    }
+
+    .card--image, .card--content{
+        width: auto;
+        padding: 5px;
+    }
+
+    .card--image{
+        position: absolute;
+        top: -6rem;
+        background-image: none;
+
+    }
+
+    .card--image figure{
+        margin: 0;
+        display: flex;
+        justify-content: center;
+    }
+
+    .card--image::before{
+        display: none;
+        
+    }
+
+    .card--content{
+        padding: 1.5rem;
+        padding-top: 6rem;
+        padding-bottom: 2rem;
+    }
+
+    .card--content h1{
+        text-align: center;
+    }
+    
+}

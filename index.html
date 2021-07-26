@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="./main.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@300;400;700&display=swap" rel="stylesheet">
+
+  <title>Frontend Mentor | FAQ Accordion Card</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body>
+  <main>
+    <div class="main-content">
+
+      <div class="card">
+        <div class="card--image">
+          <figure>
+           
+            <picture>
+              <source media="(max-width: 799px)" srcset="./images/illustration-woman-online-mobile.svg">
+              <source media="(min-width: 800px)" srcset="./images/illustration-woman-online-desktop.svg">
+              <img src="./images/illustration-woman-desktop.svg" alt="woman">
+            </picture>
+          </figure>
+
+          
+        </div>
+
+        <div class="card--content">
+          <h1>FAQ</h1>
+
+          <ul class="card--list" id="dropdown">
+            <li class="card--list__item" >
+              <div class="card--list__item-title" >
+                <p>How many team members can I invite? </p> 
+                <figure>
+                  <img src="images/icon-arrow-down.svg">
+                </figure>
+              </div>
+              <p class="card--list__item-content">
+                You can invite up to 2 additional users on the Free plan. There is no limit on 
+                team members for the Premium plan.
+              </p>
+            </li>    
+
+            <li class="card--list__item " >
+              <div class="card--list__item-title" >
+                <p>What is the maximun file upload size? </p> 
+                <figure>
+                  <img src="images/icon-arrow-down.svg">
+                </figure>
+              </div>
+              <p class="card--list__item-content">
+                No more than 2GB. All files in your account must fit your allotted storage space.
+              </p>
+            </li>
+
+            <li class="card--list__item " >
+              <div class="card--list__item-title" >
+                <p>How do reset my password? </p> 
+                <figure>
+                  <img src="images/icon-arrow-down.svg">
+                </figure>
+              </div>
+              <p class="card--list__item-content">
+                Click “Forgot password” from the login page or “Change password” from your profile page.
+                A reset link will be emailed to you.
+            </li>
+
+            <li class="card--list__item " >
+              <div class="card--list__item-title" >
+                <p>Can I cancel my suscription?</p> 
+                <figure>
+                  <img src="images/icon-arrow-down.svg">
+                </figure>
+              </div>
+              <p class="card--list__item-content">
+                Yes! Send us a message and we’ll process your request no questions asked.
+              </p>
+            </li>
+
+
+            <li class="card--list__item " >
+              <div class="card--list__item-title" >
+                <p>Do you provide additional support?</p> 
+                <figure>
+                  <img src="images/icon-arrow-down.svg">
+                </figure>
+              </div>
+              <p class="card--list__item-content">
+                Chat and email support is available 24/7. Phone lines are open during normal business hours.
+              </p>
+            </li>
+          </ul>
+         
+        </div>
+        
+      </div>
+   
+    </div>
+  </main>
+ 
+ 
+  
+  <!-- 
+    <div class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+      Coded by <a href="#">Your Name Here</a>.
+    </div>
+  -->
+
+  <script src="./main.js" type="text/javascript"></script>
+</body>
+</html>
